@@ -9,6 +9,7 @@ jobs:
       matrix:
         prod: [prod1, prod2]
         level: [dev, stage, prod]
+        rank: [r1, r2, r3]
     runs-on: ubuntu-latest
     steps:
       # Runs a set of commands using the runners shell
@@ -16,3 +17,4 @@ jobs:
         run: |
           echo Add other actions to build {{matrix.prod}}.
           echo test, and deploy your project {{matrix.level}}.
+          echo test, and deploy your project {{matrix.rank}}.
